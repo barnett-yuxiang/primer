@@ -3,26 +3,37 @@ console.log(`Hat price: ${hatPrice}`);
 let bootsPrice = "100";
 console.log(`Boots price: ${bootsPrice}`);
 
-if (hatPrice === bootsPrice) {
-    console.log("Prices are the same");
-} else {
-    console.log("Prices are different");
+function sumPrices(first, second, third = 0) {
+    return first + second + third;
 }
 
-let totalPrice = Number(hatPrice) + Number(bootsPrice);
-console.log(`Total Price: ${totalPrice}`);
+let totalPrice = sumPrices(hatPrice, bootsPrice);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
+totalPrice = sumPrices(100, 200, 300);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
+totalPrice = sumPrices(100, 200);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 
-let myVariable = "Adam";
-console.log(`Type: ${typeof myVariable}`);
+// if (hatPrice === bootsPrice) {
+//     console.log("Prices are the same");
+// } else {
+//     console.log("Prices are different");
+// }
 
-myVariable = 100;
-console.log(`Type: ${typeof myVariable}`);
+// let totalPrice = Number(hatPrice) + Number(bootsPrice);
+// console.log(`Total Price: ${totalPrice}`);
 
-let firstCity;
-let secondCity = firstCity || "London";
-console.log(`City: ${secondCity}`);
+// let myVariable = "Adam";
+// console.log(`Type: ${typeof myVariable}`);
 
-let taxRate;
-console.log(`Tax rate: ${taxRate ?? 10}%`);
-taxRate = 0;
-console.log(`Tax rate: ${taxRate ?? 10}%`);
+// myVariable = 100;
+// console.log(`Type: ${typeof myVariable}`);
+
+// let firstCity;
+// let secondCity = firstCity || "London";
+// console.log(`City: ${secondCity}`);
+
+// let taxRate;
+// console.log(`Tax rate: ${taxRate ?? 10}%`);
+// taxRate = 0;
+// console.log(`Tax rate: ${taxRate ?? 10}%`);
