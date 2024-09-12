@@ -23,6 +23,6 @@ let secondCity = firstCity || "London";
 console.log(`City: ${secondCity}`);
 
 let taxRate;
-console.log(`Tax rate: ${taxRate || 10}%`);
+console.log(`Tax rate: ${taxRate ?? 10}%`);
 taxRate = 0;
-console.log(`Tax rate: ${taxRate || 10}%`);
+console.log(`Tax rate: ${taxRate ?? 10}%`);
